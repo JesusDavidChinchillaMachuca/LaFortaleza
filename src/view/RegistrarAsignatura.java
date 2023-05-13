@@ -27,7 +27,7 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
     private void initComponents() {
 
         bg = new javax.swing.JPanel();
-        panelLaFortaleza = new javax.swing.JPanel();
+        panelRegistrarAsignatura = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         lblCodigo = new javax.swing.JLabel();
@@ -36,7 +36,7 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         btnAgregar = new javax.swing.JButton();
         lblBuscarPorCodigo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        txtBuscarPorCodigo = new javax.swing.JTextField();
+        txtPorCodigo = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
@@ -50,9 +50,9 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
 
         bg.setBackground(new java.awt.Color(51, 51, 51));
 
-        panelLaFortaleza.setBackground(new java.awt.Color(51, 51, 51));
-        panelLaFortaleza.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registrar Asignatura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Roboto Black", 0, 24), new java.awt.Color(255, 255, 255))); // NOI18N
-        panelLaFortaleza.setForeground(new java.awt.Color(255, 255, 255));
+        panelRegistrarAsignatura.setBackground(new java.awt.Color(51, 51, 51));
+        panelRegistrarAsignatura.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registrar Asignatura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Roboto Black", 0, 24), new java.awt.Color(255, 255, 255))); // NOI18N
+        panelRegistrarAsignatura.setForeground(new java.awt.Color(255, 255, 255));
 
         lblNombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblNombre.setForeground(new java.awt.Color(255, 255, 255));
@@ -81,8 +81,8 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         lblBuscarPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
         lblBuscarPorCodigo.setText("Por codigo:");
 
-        txtBuscarPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtBuscarPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        txtPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        txtPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
 
         btnBuscar.setBackground(new java.awt.Color(204, 204, 204));
         btnBuscar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
@@ -97,7 +97,7 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Codigo", "Creditos"
+                "Nombre", "Codigo", "Créditos"
             }
         ) {
             Class[] types = new Class [] {
@@ -119,68 +119,68 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
 
         lblCreditos.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCreditos.setForeground(new java.awt.Color(255, 255, 255));
-        lblCreditos.setText("Creditos:");
+        lblCreditos.setText("Créditos");
 
-        javax.swing.GroupLayout panelLaFortalezaLayout = new javax.swing.GroupLayout(panelLaFortaleza);
-        panelLaFortaleza.setLayout(panelLaFortalezaLayout);
-        panelLaFortalezaLayout.setHorizontalGroup(
-            panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelRegistrarAsignaturaLayout = new javax.swing.GroupLayout(panelRegistrarAsignatura);
+        panelRegistrarAsignatura.setLayout(panelRegistrarAsignaturaLayout);
+        panelRegistrarAsignaturaLayout.setHorizontalGroup(
+            panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
                                 .addComponent(lblBuscarPorCodigo)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                                .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
+                                .addComponent(txtPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))))
-                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
+                        .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
+                                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblNombre)
                                     .addComponent(lblCodigo))
                                 .addGap(21, 21, 21))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
-                                .addComponent(lblCreditos)
+                            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
+                                .addComponent(lblCreditos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)))
-                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
+            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1)
                 .addContainerGap())
-            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelLaFortalezaLayout.setVerticalGroup(
-            panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+        panelRegistrarAsignaturaLayout.setVerticalGroup(
+            panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombre)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCodigo)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCreditos))
                 .addGap(16, 16, 16)
@@ -190,8 +190,8 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblBuscarPorCodigo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -204,14 +204,14 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelLaFortaleza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelLaFortaleza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -229,42 +229,6 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrarAsignatura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrarAsignatura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrarAsignatura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrarAsignatura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistrarAsignatura().setVisible(true);
-            }
-        });
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel bg;
     public javax.swing.JButton btnAgregar;
@@ -275,11 +239,11 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
     public javax.swing.JLabel lblCodigo;
     public javax.swing.JLabel lblCreditos;
     public javax.swing.JLabel lblNombre;
-    public javax.swing.JPanel panelLaFortaleza;
+    public javax.swing.JPanel panelRegistrarAsignatura;
     public javax.swing.JTable tabla;
-    public javax.swing.JTextField txtBuscarPorCodigo;
     public javax.swing.JTextField txtCodigo;
     public javax.swing.JTextField txtCreditos;
     public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtPorCodigo;
     // End of variables declaration//GEN-END:variables
 }

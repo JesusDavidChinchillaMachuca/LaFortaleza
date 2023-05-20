@@ -6,24 +6,24 @@ package model.VO;
  */
 public class Programa {
 
-    private String codigo;
+    private Integer codigo;
     private String nombre;
     private Profesor direcctor;
 
     public Programa() {
     }
 
-    public Programa(String codigo, String nombre, Profesor direcctor) {
+    public Programa(Integer codigo, String nombre, Profesor direcctor) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.direcctor = direcctor;
     }
 
-    public String getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 

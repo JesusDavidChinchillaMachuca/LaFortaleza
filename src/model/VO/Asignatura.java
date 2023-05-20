@@ -6,24 +6,28 @@ package model.VO;
  */
 public class Asignatura {
 
-    private String codigo;
+    private Integer codigo;
     private String nombre;
     private Integer creditos;
-
-    public Asignatura(String codigo, String nombre, Integer creditos) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.creditos = creditos;
-    }
+    private Programa programa;
+    private Profesor profesor;
 
     public Asignatura() {
     }
 
-    public String getCodigo() {
+    public Asignatura(Integer codigo, String nombre, Integer creditos, Programa programa, Profesor profesor) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.programa = programa;
+        this.profesor = profesor;
+    }
+
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -41,6 +45,22 @@ public class Asignatura {
 
     public void setCreditos(Integer creditos) {
         this.creditos = creditos;
+    }
+
+    public Programa getPrograma() {
+        return programa;
+    }
+
+    public void setPrograma(Programa programa) {
+        this.programa = programa;
+    }
+
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
     }
 
 }

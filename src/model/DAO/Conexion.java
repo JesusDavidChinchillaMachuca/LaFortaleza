@@ -15,7 +15,7 @@ public class Conexion {
     public static Connection obtener() throws SQLException, ClassNotFoundException {
         if (cnx == null) {
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 cnx = DriverManager.getConnection("jdbc:mysql://localhost/universidad", "root", "");
             } catch (SQLException ex) {
                 throw new SQLException(ex);

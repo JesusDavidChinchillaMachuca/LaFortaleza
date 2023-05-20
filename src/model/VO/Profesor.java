@@ -6,26 +6,24 @@ package model.VO;
  */
 public class Profesor {
 
-    private String codigo;
+    private Integer codigo;
     private String nombre;
     private String titulo;
-    private Departamento departamento;
 
     public Profesor() {
     }
 
-    public Profesor(String codigo, String nombre, String titulo, Departamento departamento) {
+    public Profesor(Integer codigo, String nombre, String titulo) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.titulo = titulo;
-        this.departamento = departamento;
     }
 
-    public String getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -43,14 +41,6 @@ public class Profesor {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }
-
-    public Departamento getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
     }
 
 }

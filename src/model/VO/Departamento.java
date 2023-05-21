@@ -6,24 +6,24 @@ package model.VO;
  */
 public class Departamento {
 
-    private String codigo;
+    private int codigo;
     private String nombre;
     private String ubicacion;
 
     public Departamento() {
     }
 
-    public Departamento(String codigo, String nombre, String ubicacion) {
+    public Departamento(int codigo, String nombre, String ubicacion) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

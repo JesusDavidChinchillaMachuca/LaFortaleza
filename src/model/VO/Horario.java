@@ -6,41 +6,51 @@ package model.VO;
  */
 public class Horario {
 
-    private String hora_ini;
-    private String hora_fin;
-    private String salon;
+    private String codigoSalon;
+    private String horaInicio;
+    private String horaFin;
+    private String diaSemana;
 
     public Horario() {
     }
 
-    public Horario(String hora_ini, String hora_fin, String salon) {
-        this.hora_ini = hora_ini;
-        this.hora_fin = hora_fin;
-        this.salon = salon;
+    public Horario(String codigoSalon, String horaInicio, String horaFin, String diaSemana) {
+        this.codigoSalon = codigoSalon;
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+        this.diaSemana = diaSemana;
     }
 
-    public String getHora_ini() {
-        return hora_ini;
+    public String getCodigoSalon() {
+        return codigoSalon;
     }
 
-    public void setHora_ini(String hora_ini) {
-        this.hora_ini = hora_ini;
+    public void setCodigoSalon(String codigoSalon) {
+        this.codigoSalon = codigoSalon;
     }
 
-    public String getHora_fin() {
-        return hora_fin;
+    public String getHoraInicio() {
+        return horaInicio;
     }
 
-    public void setHora_fin(String hora_fin) {
-        this.hora_fin = hora_fin;
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
     }
 
-    public String getSalon() {
-        return salon;
+    public String getHoraFin() {
+        return horaFin;
     }
 
-    public void setSalon(String salon) {
-        this.salon = salon;
+    public void setHoraFin(String horaFin) {
+        this.horaFin = horaFin;
+    }
+
+    public String getDiaSemana() {
+        return diaSemana;
+    }
+
+    public void setDiaSemana(String diaSemana) {
+        this.diaSemana = diaSemana;
     }
 
 }

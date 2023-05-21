@@ -6,7 +6,7 @@ package model.VO;
  */
 public class Asignatura {
 
-    private Integer codigo;
+    private int codigo;
     private String nombre;
     private Integer creditos;
     private Programa programa;
@@ -15,7 +15,7 @@ public class Asignatura {
     public Asignatura() {
     }
 
-    public Asignatura(Integer codigo, String nombre, Integer creditos, Programa programa, Profesor profesor) {
+    public Asignatura(int codigo, String nombre, Integer creditos, Programa programa, Profesor profesor) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.creditos = creditos;
@@ -23,11 +23,11 @@ public class Asignatura {
         this.profesor = profesor;
     }
 
-    public Integer getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

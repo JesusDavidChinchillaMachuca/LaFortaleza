@@ -6,13 +6,13 @@ package model.VO;
  */
 public class Estudiante {
 
-    private String codigo;
+    private int codigo;
     private String nombre;
     private String direccion;
     private String genero;
     private String correo;
 
-    public Estudiante(String codigo, String nombre, String direccion, String genero, String correo) {
+    public Estudiante(int codigo, String nombre, String direccion, String genero, String correo) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -20,11 +20,11 @@ public class Estudiante {
         this.correo = correo;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

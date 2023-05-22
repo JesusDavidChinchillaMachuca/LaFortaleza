@@ -18,7 +18,7 @@ public class EstudianteDAO {
             consulta.setString(3, estudiante.getDireccion());
             consulta.setString(4, estudiante.getGenero());
             consulta.setString(5, estudiante.getCorreo());
-
+            consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);
         }

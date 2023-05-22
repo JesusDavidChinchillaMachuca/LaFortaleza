@@ -41,6 +41,7 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         lblCreditos = new javax.swing.JLabel();
+        btnInicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad La Fortaleza");
@@ -59,17 +60,17 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         lblNombre.setText("Nombre:");
 
         txtNombre.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
 
         lblCodigo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCodigo.setForeground(new java.awt.Color(255, 255, 255));
         lblCodigo.setText("Codigo:");
 
         txtCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        txtCodigo.setForeground(new java.awt.Color(0, 0, 0));
 
         txtCreditos.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtCreditos.setForeground(new java.awt.Color(255, 255, 255));
+        txtCreditos.setForeground(new java.awt.Color(0, 0, 0));
 
         btnAgregar.setBackground(new java.awt.Color(204, 204, 204));
         btnAgregar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
@@ -100,16 +101,9 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
                 "Nombre", "Codigo", "Créditos"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -120,6 +114,12 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
         lblCreditos.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCreditos.setForeground(new java.awt.Color(255, 255, 255));
         lblCreditos.setText("Créditos");
+
+        btnInicio.setBackground(new java.awt.Color(204, 204, 204));
+        btnInicio.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(0, 0, 0));
+        btnInicio.setText("Inicio");
+        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelRegistrarAsignaturaLayout = new javax.swing.GroupLayout(panelRegistrarAsignatura);
         panelRegistrarAsignatura.setLayout(panelRegistrarAsignaturaLayout);
@@ -157,15 +157,18 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
+                        .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
+                        .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
             .addGroup(panelRegistrarAsignaturaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarAsignaturaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1)
+                .addGroup(panelRegistrarAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         panelRegistrarAsignaturaLayout.setVerticalGroup(
@@ -195,7 +198,9 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
                     .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -233,6 +238,7 @@ public class RegistrarAsignatura extends javax.swing.JFrame {
     public javax.swing.JPanel bg;
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnInicio;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     public javax.swing.JLabel lblBuscarPorCodigo;

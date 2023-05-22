@@ -13,6 +13,10 @@ public class Departamento {
     public Departamento() {
     }
 
+    public Departamento(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Departamento(int codigo, String nombre, String ubicacion) {
         this.codigo = codigo;
         this.nombre = nombre;

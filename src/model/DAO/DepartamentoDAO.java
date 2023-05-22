@@ -16,7 +16,7 @@ public class DepartamentoDAO {
             consulta.setInt(1, departamento.getCodigo());
             consulta.setString(2, departamento.getNombre());
             consulta.setString(3, departamento.getUbicacion());
-
+            consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);
         }

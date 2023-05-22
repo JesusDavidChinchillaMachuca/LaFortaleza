@@ -18,7 +18,7 @@ public class AsignaturaDAO {
             consulta.setInt(3, asignatura.getCreditos());
             consulta.setInt(4, asignatura.getPrograma().getCodigo());
             consulta.setInt(5, asignatura.getProfesor().getCodigo());
-
+            consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);
         }

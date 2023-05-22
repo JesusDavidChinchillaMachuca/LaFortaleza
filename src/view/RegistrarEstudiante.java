@@ -42,6 +42,7 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         cmbGenero = new javax.swing.JComboBox<>();
         lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
+        btnInicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad La Fortaleza");
@@ -101,16 +102,9 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
                 "Nombre", "Codigo", "Dirección", "Genero", "Correo"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -136,6 +130,12 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
 
         txtCorreo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
         txtCorreo.setForeground(new java.awt.Color(0, 0, 0));
+
+        btnInicio.setBackground(new java.awt.Color(204, 204, 204));
+        btnInicio.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(0, 0, 0));
+        btnInicio.setText("Inicio");
+        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelRegistrarEstudianteLayout = new javax.swing.GroupLayout(panelRegistrarEstudiante);
         panelRegistrarEstudiante.setLayout(panelRegistrarEstudianteLayout);
@@ -178,6 +178,10 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarEstudianteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         panelRegistrarEstudianteLayout.setVerticalGroup(
             panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,6 +217,8 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
                     .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -251,6 +257,7 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
     public javax.swing.JPanel bg;
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnInicio;
     public javax.swing.JComboBox<String> cmbGenero;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;

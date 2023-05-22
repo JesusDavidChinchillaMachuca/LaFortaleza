@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import model.VO.Profesor;
 
-public class ProfesoreDAO {
+public class ProfesorDAO {
 
     public void guardar(Connection conexion, Profesor profesor) throws SQLException {
         try {
@@ -17,7 +17,7 @@ public class ProfesoreDAO {
             consulta.setString(2, profesor.getNombre());
             consulta.setString(3, profesor.getTitulo());
             consulta.setInt(4, profesor.getDepartamento().getCodigo());
-
+            consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);
         }

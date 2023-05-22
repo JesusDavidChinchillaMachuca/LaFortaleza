@@ -14,6 +14,10 @@ public class Profesor {
     public Profesor() {
     }
 
+    public Profesor(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Profesor(int codigo, String nombre, String titulo, Departamento departamento) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -52,7 +56,5 @@ public class Profesor {
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
-
-    
 
 }

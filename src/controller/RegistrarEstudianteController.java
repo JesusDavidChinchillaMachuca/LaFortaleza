@@ -26,6 +26,7 @@ public class RegistrarEstudianteController implements ActionListener {
     private void ActionListener(ActionListener controller) {
         registroEstudiante.btnAgregar.addActionListener(controller);
         registroEstudiante.btnBuscar.addActionListener(controller);
+        registroEstudiante.btnInicio.addActionListener(controller);
     }
 
     @Override
@@ -50,6 +51,15 @@ public class RegistrarEstudianteController implements ActionListener {
             registroEstudiante.txtDireccion.setText("");
             registroEstudiante.txtCorreo.setText("");
 
+        }
+        
+        if (event.getSource() == registroEstudiante.btnBuscar) {
+            
+        }
+        
+        if (event.getSource() == registroEstudiante.btnInicio) {
+            registroEstudiante.setVisible(false);
+            PrincipalController controller = new PrincipalController();
         }
 
     }

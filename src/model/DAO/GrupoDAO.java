@@ -18,7 +18,6 @@ public class GrupoDAO {
             consulta.setInt(3, grupo.getProfesor().getCodigo());
             consulta.setString(4, grupo.getHorario().getCodigoSalon());
             consulta.setInt(5, grupo.getAsignatura().getCodigo());
-
             consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);

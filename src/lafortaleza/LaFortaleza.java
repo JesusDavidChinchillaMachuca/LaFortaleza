@@ -1,7 +1,6 @@
 package lafortaleza;
 
 import controller.PrincipalController;
-import view.MenuPrincipal;
 
 /**
  *

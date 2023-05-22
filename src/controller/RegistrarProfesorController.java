@@ -2,6 +2,9 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.DAO.Conexion;
+import model.DAO.ProfesorDAO;
+import model.VO.Profesor;
 import view.RegistrarProfesor;
 
 /**
@@ -22,6 +25,7 @@ public class RegistrarProfesorController implements ActionListener {
     private void ActionListener(ActionListener controller) {
         registroProfesor.btnAgregar.addActionListener(controller);
         registroProfesor.btnBuscar.addActionListener(controller);
+        registroProfesor.btnInicio.addActionListener(controller);
     }
 
     @Override
@@ -31,6 +35,23 @@ public class RegistrarProfesorController implements ActionListener {
 
         }
 
+        if (event.getSource() == registroProfesor.btnBuscar) {
+
+        }
+
+        if (event.getSource() == registroProfesor.btnInicio) {
+            registroProfesor.setVisible(false);
+            PrincipalController controller = new PrincipalController();
+        }
+
+    }
+
+    public void registrar(Profesor profesor) {
+        try {
+            ProfesorDAO us = new ProfesorDAO();
+            us.guardar(Conexion.obtener(), profesor);
+        } catch (Exception e) {
+        }
     }
 
 }

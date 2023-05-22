@@ -2,6 +2,9 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.DAO.AsignaturaDAO;
+import model.DAO.Conexion;
+import model.VO.Asignatura;
 import view.RegistrarAsignatura;
 
 /**
@@ -10,7 +13,7 @@ import view.RegistrarAsignatura;
  */
 public class RegistrarAsignaturaController implements ActionListener {
 
-    RegistrarAsignatura registroAsignatura;
+    private RegistrarAsignatura registroAsignatura;
 
     public RegistrarAsignaturaController() {
         registroAsignatura = new RegistrarAsignatura();
@@ -22,6 +25,7 @@ public class RegistrarAsignaturaController implements ActionListener {
     private void ActionListener(ActionListener controller) {
         registroAsignatura.btnAgregar.addActionListener(controller);
         registroAsignatura.btnBuscar.addActionListener(controller);
+        registroAsignatura.btnInicio.addActionListener(controller);
     }
 
     @Override
@@ -31,6 +35,23 @@ public class RegistrarAsignaturaController implements ActionListener {
 
         }
 
+        if (event.getSource() == registroAsignatura.btnBuscar) {
+
+        }
+
+        if (event.getSource() == registroAsignatura.btnInicio) {
+            registroAsignatura.setVisible(false);
+            PrincipalController controller = new PrincipalController();
+        }
+
+    }
+
+    public void registrar(Asignatura asignatura) {
+        try {
+            AsignaturaDAO us = new AsignaturaDAO();
+            us.guardar(Conexion.obtener(), asignatura);
+        } catch (Exception e) {
+        }
     }
 
 }

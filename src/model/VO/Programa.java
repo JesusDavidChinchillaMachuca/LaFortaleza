@@ -11,6 +11,10 @@ public class Programa {
     public Programa() {
     }
 
+    public Programa(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Programa(int codigo, String nombre, String ubicacion, Profesor profesor, Departamento departamento) {
         this.codigo = codigo;
         this.nombre = nombre;

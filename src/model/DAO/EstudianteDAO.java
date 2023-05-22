@@ -11,7 +11,7 @@ public class EstudianteDAO {
         try {
 
             PreparedStatement consulta;
-            consulta = conexion.prepareStatement("INSERT INTO estudiante( codigo, nombre, direccion, genero, correo) "
+            consulta = conexion.prepareStatement("INSERT INTO estudiante (codigo, nombre, direccion, genero, correo) "
                     + "VALUES(?, ?, ?, ? ,?)");
             consulta.setInt(1, estudiante.getCodigo());
             consulta.setString(2, estudiante.getNombre());

@@ -10,12 +10,9 @@ import view.MenuPrincipal;
 public class LaFortaleza {
 
     public static void main(String[] args) {
-        
-        MenuPrincipal vista = new MenuPrincipal();
-        PrincipalController controller = new PrincipalController(vista);
-        vista.setVisible(true);
-        vista.setLocationRelativeTo(null);
-        
+
+        PrincipalController controller = new PrincipalController();
+
     }
-    
+
 }

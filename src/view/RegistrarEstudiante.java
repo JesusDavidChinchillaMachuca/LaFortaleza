@@ -60,17 +60,17 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         lblNombre.setText("Nombre:");
 
         txtNombre.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
 
         lblCodigo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCodigo.setForeground(new java.awt.Color(255, 255, 255));
         lblCodigo.setText("Codigo:");
 
         txtCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtCodigo.setForeground(new java.awt.Color(255, 255, 255));
+        txtCodigo.setForeground(new java.awt.Color(0, 0, 0));
 
         txtDireccion.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtDireccion.setForeground(new java.awt.Color(255, 255, 255));
+        txtDireccion.setForeground(new java.awt.Color(0, 0, 0));
 
         btnAgregar.setBackground(new java.awt.Color(204, 204, 204));
         btnAgregar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
@@ -127,46 +127,20 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         lblGenero.setText("Genero:");
 
         cmbGenero.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        cmbGenero.setForeground(new java.awt.Color(255, 255, 255));
-        cmbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Mujer", "Hombre", "Prefiero no decirlo" }));
+        cmbGenero.setForeground(new java.awt.Color(0, 0, 0));
+        cmbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mujer", "Hombre" }));
 
         lblCorreo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCorreo.setForeground(new java.awt.Color(255, 255, 255));
         lblCorreo.setText("Correo:");
 
         txtCorreo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        txtCorreo.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelRegistrarEstudianteLayout = new javax.swing.GroupLayout(panelRegistrarEstudiante);
         panelRegistrarEstudiante.setLayout(panelRegistrarEstudianteLayout);
         panelRegistrarEstudianteLayout.setHorizontalGroup(
             panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                            .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblNombre)
-                                .addComponent(lblCodigo))
-                            .addGap(21, 21, 21))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarEstudianteLayout.createSequentialGroup()
-                            .addComponent(lblDireccion)
-                            .addGap(18, 18, 18)))
-                    .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                        .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblGenero)
-                            .addComponent(lblCorreo))
-                        .addGap(33, 33, 33)))
-                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCodigo)
-                    .addComponent(cmbGenero, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtDireccion)
-                    .addComponent(txtNombre))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
             .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,6 +160,24 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(jScrollPane1)
                 .addContainerGap())
+            .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNombre)
+                    .addComponent(lblCodigo)
+                    .addComponent(lblGenero)
+                    .addComponent(lblCorreo)
+                    .addComponent(lblDireccion))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtDireccion)
+                    .addComponent(txtCorreo)
+                    .addComponent(txtNombre)
+                    .addComponent(txtCodigo)
+                    .addComponent(cmbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
         panelRegistrarEstudianteLayout.setVerticalGroup(
             panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

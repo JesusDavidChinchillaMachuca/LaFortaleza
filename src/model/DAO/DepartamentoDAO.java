@@ -21,4 +21,6 @@ public class DepartamentoDAO {
             throw new SQLException(ex);
         }
     }
+    
+    
 }

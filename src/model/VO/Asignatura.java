@@ -8,14 +8,14 @@ public class Asignatura {
 
     private int codigo;
     private String nombre;
-    private Integer creditos;
+    private int creditos;
     private Programa programa;
     private Profesor profesor;
 
     public Asignatura() {
     }
 
-    public Asignatura(int codigo, String nombre, Integer creditos, Programa programa, Profesor profesor) {
+    public Asignatura(int codigo, String nombre, int creditos, Programa programa, Profesor profesor) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.creditos = creditos;
@@ -39,11 +39,11 @@ public class Asignatura {
         this.nombre = nombre;
     }
 
-    public Integer getCreditos() {
+    public int getCreditos() {
         return creditos;
     }
 
-    public void setCreditos(Integer creditos) {
+    public void setCreditos(int creditos) {
         this.creditos = creditos;
     }
 

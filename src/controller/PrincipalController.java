@@ -34,6 +34,8 @@ public class PrincipalController implements ActionListener {
         vista.btnRegistrarAsignatura.addActionListener(controller);
         vista.btnReporte.addActionListener(controller);
         vista.btnRegistrarEstudiante.addActionListener(controller);
+        vista.btnRegistrarDepartamento.addActionListener(controller);
+        vista.btnRegistrarPrograma.addActionListener(controller);
     }
 
     @Override
@@ -48,8 +50,14 @@ public class PrincipalController implements ActionListener {
         if (event.getSource() == vista.btnRegistrarEstudiante) {
             registrarEstudianteGUI();
         }
+        if (event.getSource() == vista.btnRegistrarDepartamento) {
+            registrarDepartamentoGUI();
+        }
+        if (event.getSource() == vista.btnRegistrarPrograma) {
+            registrarProgramaGUI();
+        }
         if (event.getSource() == vista.btnReporte) {
-
+            
         }
 
     }
@@ -70,6 +78,17 @@ public class PrincipalController implements ActionListener {
     public void registrarProfesorGUI() {
         vista.setVisible(false);
         RegistrarProfesorController profesorController = new RegistrarProfesorController();
+    }
+    
+    // Ocultar la GUI actual (si hay una) y mostrar la registrarDepartamentoGUI
+    public void registrarDepartamentoGUI() {
+        vista.setVisible(false);
+        RegistrarDepartamentoController departamentoController = new RegistrarDepartamentoController();
+    }
+    // Ocultar la GUI actual (si hay una) y mostrar la registrarProgramaGUI
+    public void registrarProgramaGUI() {
+        vista.setVisible(false);
+        RegistrarProgramaController programaController = new RegistrarProgramaController();
     }
 
     public void reporteGUI() {

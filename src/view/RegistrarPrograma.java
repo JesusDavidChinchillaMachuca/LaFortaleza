@@ -38,7 +38,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
         lblCreditos2 = new javax.swing.JLabel();
         txtCodDepartamento = new javax.swing.JTextField();
         lblCreditos3 = new javax.swing.JLabel();
-        txtCodProfesor = new javax.swing.JTextField();
+        txtCodDirector = new javax.swing.JTextField();
         lblBuscarPorCodigo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         txtPorCodigo = new javax.swing.JTextField();
@@ -90,10 +90,10 @@ public class RegistrarPrograma extends javax.swing.JFrame {
 
         lblCreditos3.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblCreditos3.setForeground(new java.awt.Color(255, 255, 255));
-        lblCreditos3.setText("codigo del profesor");
+        lblCreditos3.setText("codigo del director");
 
-        txtCodProfesor.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtCodProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        txtCodDirector.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        txtCodDirector.setForeground(new java.awt.Color(0, 0, 0));
 
         lblBuscarPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         lblBuscarPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,7 +169,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
                                     .addComponent(lblCreditos3))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCodProfesor)
+                                    .addComponent(txtCodDirector)
                                     .addComponent(txtCodDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -201,7 +201,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
                     .addComponent(lblCreditos2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodDirector, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCreditos3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,7 +268,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
     public javax.swing.JLabel lblNombre1;
     public javax.swing.JTable tabla;
     public javax.swing.JTextField txtCodDepartamento;
-    public javax.swing.JTextField txtCodProfesor;
+    public javax.swing.JTextField txtCodDirector;
     public javax.swing.JTextField txtCodigo;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtPorCodigo;

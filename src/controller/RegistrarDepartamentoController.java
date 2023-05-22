@@ -1,8 +1,8 @@
-
 package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.DAO.Conexion;
 import model.DAO.DepartamentoDAO;
 import model.VO.Departamento;
@@ -12,11 +12,10 @@ import view.RegistrarDepartamento;
  *
  * @author Daniel Barrientos - 1152143
  */
+public class RegistrarDepartamentoController implements ActionListener {
 
-public class RegistrarDepartamentoController implements ActionListener{
-    
-    private RegistrarDepartamento registrarDepartamento; 
-    
+    private RegistrarDepartamento registrarDepartamento;
+
     public RegistrarDepartamentoController() {
         registrarDepartamento = new RegistrarDepartamento();
         registrarDepartamento.setVisible(true);
@@ -35,12 +34,23 @@ public class RegistrarDepartamentoController implements ActionListener{
 
         if (event.getSource() == registrarDepartamento.btnAgregar) {
             
+            int codigo = Integer.parseInt(registrarDepartamento.txtCodigo.getText());
+            String nombre = registrarDepartamento.txtNombre.getText();
+            String ubicacion = registrarDepartamento.txtUbicacion.getText();
             
+            Departamento departamento  = new Departamento(codigo, nombre, ubicacion);
+            
+            registrar(departamento);
+            
+            JOptionPane.showMessageDialog(registrarDepartamento, "Se ha registrado correctamente");
+            
+            registrarDepartamento.txtCodigo.setText("");
+            registrarDepartamento.txtNombre.setText("");
+            registrarDepartamento.txtUbicacion.setText("");
 
         }
-        
+
         if (event.getSource() == registrarDepartamento.btnBuscar) {
-            
 
         }
 
@@ -50,7 +60,7 @@ public class RegistrarDepartamentoController implements ActionListener{
         }
 
     }
-    
+
     public void registrar(Departamento departamento) {
         try {
             DepartamentoDAO us = new DepartamentoDAO();
@@ -58,7 +68,5 @@ public class RegistrarDepartamentoController implements ActionListener{
         } catch (Exception e) {
         }
     }
-    
-    
 
 }

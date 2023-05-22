@@ -33,6 +33,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRegistrarAsignatura = new javax.swing.JButton();
         btnRegistrarProfesor = new javax.swing.JButton();
         btnReporte = new javax.swing.JButton();
+        btnRegistrarDepartamento = new javax.swing.JButton();
+        btnRegistrarPrograma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad La Fortaleza");
@@ -77,23 +79,44 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnReporte.setText("Reporte");
         btnReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnRegistrarDepartamento.setBackground(new java.awt.Color(204, 204, 204));
+        btnRegistrarDepartamento.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnRegistrarDepartamento.setForeground(new java.awt.Color(0, 0, 0));
+        btnRegistrarDepartamento.setText("Registrar Departamento");
+        btnRegistrarDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnRegistrarPrograma.setBackground(new java.awt.Color(204, 204, 204));
+        btnRegistrarPrograma.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnRegistrarPrograma.setForeground(new java.awt.Color(0, 0, 0));
+        btnRegistrarPrograma.setText("Registrar Programa");
+        btnRegistrarPrograma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         javax.swing.GroupLayout panelLaFortalezaLayout = new javax.swing.GroupLayout(panelLaFortaleza);
         panelLaFortaleza.setLayout(panelLaFortalezaLayout);
         panelLaFortalezaLayout.setHorizontalGroup(
             panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
                 .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRegistrarEstudiante, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(43, 43, 43)
+                        .addGap(44, 44, 44)
                         .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(44, 44, 44))
+                            .addComponent(txtBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnRegistrarEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(43, 43, 43)
+                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(btnRegistrarPrograma)))
+                .addGap(44, 44, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnReporte)
+                .addGap(15, 15, 15))
         );
         panelLaFortalezaLayout.setVerticalGroup(
             panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,8 +130,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(74, Short.MAX_VALUE))
+                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistrarPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -146,8 +173,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel bg;
     public javax.swing.JButton btnRegistrarAsignatura;
+    public javax.swing.JButton btnRegistrarDepartamento;
     public javax.swing.JButton btnRegistrarEstudiante;
     public javax.swing.JButton btnRegistrarProfesor;
+    public javax.swing.JButton btnRegistrarPrograma;
     public javax.swing.JButton btnReporte;
     public javax.swing.JPanel panelLaFortaleza;
     public javax.swing.JTextPane txtBienvenida;

@@ -2,8 +2,10 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.DAO.Conexion;
 import model.DAO.ProfesorDAO;
+import model.VO.Departamento;
 import model.VO.Profesor;
 import view.RegistrarProfesor;
 
@@ -33,6 +35,23 @@ public class RegistrarProfesorController implements ActionListener {
 
         if (event.getSource() == registroProfesor.btnAgregar) {
 
+            int codigo = Integer.parseInt(registroProfesor.txtCodigo.getText());
+            String nombre = registroProfesor.txtNombre.getText();
+            String titulo = registroProfesor.txtTitulo.getText();
+            int codigoDepartamento = Integer.parseInt(registroProfesor.txtDepartamneto.getText());
+
+            Departamento departamento = new Departamento(codigoDepartamento);
+
+            Profesor profesor = new Profesor(codigo, nombre, titulo, departamento);
+
+            registrar(profesor);
+            
+            JOptionPane.showMessageDialog(registroProfesor, "Se ha registrado correctamente");
+            
+            registroProfesor.txtCodigo.setText("");
+            registroProfesor.txtNombre.setText("");
+            registroProfesor.txtTitulo.setText("");
+            registroProfesor.txtDepartamneto.setText("");
         }
 
         if (event.getSource() == registroProfesor.btnBuscar) {

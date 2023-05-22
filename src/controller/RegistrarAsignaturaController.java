@@ -2,9 +2,12 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import model.DAO.AsignaturaDAO;
 import model.DAO.Conexion;
 import model.VO.Asignatura;
+import model.VO.Profesor;
+import model.VO.Programa;
 import view.RegistrarAsignatura;
 
 /**
@@ -32,6 +35,27 @@ public class RegistrarAsignaturaController implements ActionListener {
     public void actionPerformed(ActionEvent event) {
 
         if (event.getSource() == registroAsignatura.btnAgregar) {
+
+            int codigo = Integer.parseInt(registroAsignatura.txtCodigo.getText());
+            String nombre = registroAsignatura.txtNombre.getText();
+            int creditos = Integer.parseInt(registroAsignatura.txtCreditos.getText());
+            int codigoProfesor = Integer.parseInt(registroAsignatura.txtCodProfesor.getText());
+            int codigoPrograma = Integer.parseInt(registroAsignatura.txtCodPrograma.getText());
+
+            Programa programa = new Programa(codigoPrograma);
+            Profesor profesor = new Profesor(codigoProfesor);
+
+            Asignatura asignatura = new Asignatura(codigo, nombre, creditos, programa, profesor);
+
+            registrar(asignatura);
+
+            JOptionPane.showMessageDialog(registroAsignatura, "Se ha registrado correctamente");
+
+            registroAsignatura.txtCodigo.setText("");
+            registroAsignatura.txtNombre.setText("");
+            registroAsignatura.txtCreditos.setText("");
+            registroAsignatura.txtCodProfesor.setText("");
+            registroAsignatura.txtCodPrograma.setText("");
 
         }
 

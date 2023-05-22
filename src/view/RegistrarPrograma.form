@@ -117,7 +117,7 @@
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtCodProfesor" max="32767" attributes="0"/>
+                                          <Component id="txtCodDirector" max="32767" attributes="0"/>
                                           <Component id="txtCodDepartamento" pref="150" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -162,7 +162,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCodProfesor" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtCodDirector" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="lblCreditos3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -322,13 +322,13 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="codigo del profesor"/>
+                <Property name="text" type="java.lang.String" value="codigo del director"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCodProfesor">
+            <Component class="javax.swing.JTextField" name="txtCodDirector">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto Light" size="12" style="1"/>

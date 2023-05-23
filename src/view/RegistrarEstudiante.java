@@ -92,8 +92,9 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         btnBuscar.setText("Buscar");
         btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        tabla.setBackground(new java.awt.Color(204, 204, 204));
         tabla.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        tabla.setForeground(new java.awt.Color(255, 255, 255));
+        tabla.setForeground(new java.awt.Color(0, 0, 0));
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

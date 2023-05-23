@@ -3,7 +3,11 @@ package model.DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import model.VO.Estudiante;
+import java.sql.ResultSet;
+
 
 public class EstudianteDAO {
 
@@ -23,6 +27,33 @@ public class EstudianteDAO {
             throw new SQLException(ex);
         }
     }
-    
-    
+
+    public void mostrarEstudiante(Connection conexion, JTable tablaEstudiante) throws SQLException {
+
+        DefaultTableModel model = new DefaultTableModel();
+
+        model.addColumn("Codigo");
+        model.addColumn("Nombre");
+        model.addColumn("Dirección");
+        model.addColumn("Genero");
+        model.addColumn("Correo");
+
+        try {
+            PreparedStatement consulta = conexion.prepareStatement("SELECT * FROM estudiante");
+            ResultSet resultado = consulta.executeQuery();
+            while (resultado.next()) {
+
+                Object[] lista = {resultado.getInt(1), resultado.getString(2), resultado.getString(3), resultado.getString(4),
+                    resultado.getString(5)};
+                model.addRow(lista);
+
+            }
+
+            tablaEstudiante.setModel(model);
+
+        } catch (SQLException ex) {
+            throw new SQLException(ex);
+        }
+
+    }
 }

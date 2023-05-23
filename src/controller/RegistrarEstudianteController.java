@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import model.DAO.Conexion;
 import model.DAO.EstudianteDAO;
 import model.VO.Estudiante;
@@ -45,18 +46,18 @@ public class RegistrarEstudianteController implements ActionListener {
             registrar(estudiante);
 
             JOptionPane.showMessageDialog(registroEstudiante, "Se ha registrado correctamente");
-            
+
             registroEstudiante.txtCodigo.setText("");
             registroEstudiante.txtNombre.setText("");
             registroEstudiante.txtDireccion.setText("");
             registroEstudiante.txtCorreo.setText("");
 
         }
-        
+
         if (event.getSource() == registroEstudiante.btnBuscar) {
-            
+            MostrarEstudiante(registroEstudiante.tabla);
         }
-        
+
         if (event.getSource() == registroEstudiante.btnInicio) {
             registroEstudiante.setVisible(false);
             PrincipalController controller = new PrincipalController();
@@ -72,4 +73,15 @@ public class RegistrarEstudianteController implements ActionListener {
         } catch (Exception e) {
         }
     }
+
+    public void MostrarEstudiante(JTable tablaEstudiante) {
+        try {
+            EstudianteDAO vdao = new EstudianteDAO();
+            vdao.mostrarEstudiante(Conexion.obtener(), tablaEstudiante);
+
+        } catch (Exception e) {
+        }
+
+    }
+    
 }

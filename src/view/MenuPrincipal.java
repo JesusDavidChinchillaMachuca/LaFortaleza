@@ -32,7 +32,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRegistrarEstudiante = new javax.swing.JButton();
         btnRegistrarAsignatura = new javax.swing.JButton();
         btnRegistrarProfesor = new javax.swing.JButton();
-        btnReporte = new javax.swing.JButton();
+        btnMatricula = new javax.swing.JButton();
         btnRegistrarDepartamento = new javax.swing.JButton();
         btnRegistrarPrograma = new javax.swing.JButton();
 
@@ -73,11 +73,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRegistrarProfesor.setText("Registrar Profesor");
         btnRegistrarProfesor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnReporte.setBackground(new java.awt.Color(204, 204, 204));
-        btnReporte.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        btnReporte.setForeground(new java.awt.Color(0, 0, 0));
-        btnReporte.setText("Reporte");
-        btnReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMatricula.setBackground(new java.awt.Color(204, 204, 204));
+        btnMatricula.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnMatricula.setForeground(new java.awt.Color(0, 0, 0));
+        btnMatricula.setText("Matricularse");
+        btnMatricula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnRegistrarDepartamento.setBackground(new java.awt.Color(204, 204, 204));
         btnRegistrarDepartamento.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
@@ -115,7 +115,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(44, 44, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnReporte)
+                .addComponent(btnMatricula)
                 .addGap(15, 15, 15))
         );
         panelLaFortalezaLayout.setVerticalGroup(
@@ -134,7 +134,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnRegistrarPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -172,12 +172,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel bg;
+    public javax.swing.JButton btnMatricula;
     public javax.swing.JButton btnRegistrarAsignatura;
     public javax.swing.JButton btnRegistrarDepartamento;
     public javax.swing.JButton btnRegistrarEstudiante;
     public javax.swing.JButton btnRegistrarProfesor;
     public javax.swing.JButton btnRegistrarPrograma;
-    public javax.swing.JButton btnReporte;
     public javax.swing.JPanel panelLaFortaleza;
     public javax.swing.JTextPane txtBienvenida;
     // End of variables declaration//GEN-END:variables

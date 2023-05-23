@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
 import model.DAO.AsignaturaDAO;
 import model.DAO.Conexion;
 import model.VO.Asignatura;
-import model.VO.Profesor;
 import model.VO.Programa;
 import view.RegistrarAsignatura;
 
@@ -39,13 +38,11 @@ public class RegistrarAsignaturaController implements ActionListener {
             int codigo = Integer.parseInt(registroAsignatura.txtCodigo.getText());
             String nombre = registroAsignatura.txtNombre.getText();
             int creditos = Integer.parseInt(registroAsignatura.txtCreditos.getText());
-            int codigoProfesor = Integer.parseInt(registroAsignatura.txtCodProfesor.getText());
             int codigoPrograma = Integer.parseInt(registroAsignatura.txtCodPrograma.getText());
 
             Programa programa = new Programa(codigoPrograma);
-            Profesor profesor = new Profesor(codigoProfesor);
 
-            Asignatura asignatura = new Asignatura(codigo, nombre, creditos, programa, profesor);
+            Asignatura asignatura = new Asignatura(codigo, nombre, creditos, programa);
 
             registrar(asignatura);
 
@@ -54,7 +51,6 @@ public class RegistrarAsignaturaController implements ActionListener {
             registroAsignatura.txtCodigo.setText("");
             registroAsignatura.txtNombre.setText("");
             registroAsignatura.txtCreditos.setText("");
-            registroAsignatura.txtCodProfesor.setText("");
             registroAsignatura.txtCodPrograma.setText("");
 
         }

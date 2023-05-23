@@ -32,7 +32,7 @@ public class PrincipalController implements ActionListener {
     private void ActionListener(ActionListener controller) {
         vista.btnRegistrarProfesor.addActionListener(controller);
         vista.btnRegistrarAsignatura.addActionListener(controller);
-        vista.btnReporte.addActionListener(controller);
+        vista.btnMatricula.addActionListener(controller);
         vista.btnRegistrarEstudiante.addActionListener(controller);
         vista.btnRegistrarDepartamento.addActionListener(controller);
         vista.btnRegistrarPrograma.addActionListener(controller);
@@ -44,20 +44,25 @@ public class PrincipalController implements ActionListener {
         if (event.getSource() == vista.btnRegistrarProfesor) {
             registrarProfesorGUI();
         }
+        
         if (event.getSource() == vista.btnRegistrarAsignatura) {
             registrarAsignaturaGUI();
         }
+        
         if (event.getSource() == vista.btnRegistrarEstudiante) {
             registrarEstudianteGUI();
         }
+        
         if (event.getSource() == vista.btnRegistrarDepartamento) {
             registrarDepartamentoGUI();
         }
+        
         if (event.getSource() == vista.btnRegistrarPrograma) {
             registrarProgramaGUI();
         }
-        if (event.getSource() == vista.btnReporte) {
-            
+        
+        if (event.getSource() == vista.btnMatricula) {
+            MatriculaGUI();
         }
 
     }
@@ -79,20 +84,23 @@ public class PrincipalController implements ActionListener {
         vista.setVisible(false);
         RegistrarProfesorController profesorController = new RegistrarProfesorController();
     }
-    
+
     // Ocultar la GUI actual (si hay una) y mostrar la registrarDepartamentoGUI
     public void registrarDepartamentoGUI() {
         vista.setVisible(false);
         RegistrarDepartamentoController departamentoController = new RegistrarDepartamentoController();
     }
+
     // Ocultar la GUI actual (si hay una) y mostrar la registrarProgramaGUI
     public void registrarProgramaGUI() {
         vista.setVisible(false);
         RegistrarProgramaController programaController = new RegistrarProgramaController();
     }
-
-    public void reporteGUI() {
+    
+    // Ocultar la GUI actual (si hay una) y mostrar la MatriculaGUI
+    public void MatriculaGUI() {
         vista.setVisible(false);
+        MatriculaController matriculaController = new MatriculaController();
     }
 
 }

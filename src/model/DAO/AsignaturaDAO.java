@@ -11,13 +11,12 @@ public class AsignaturaDAO {
         try {
 
             PreparedStatement consulta;
-            consulta = conexion.prepareStatement("INSERT INTO asignatura (codigo, nombre, creditos, codigo_programa, codigo_profesor) "
-                    + "VALUES(?, ?, ?, ?, ?)");
+            consulta = conexion.prepareStatement("INSERT INTO asignatura (codigo, nombre, creditos, codigo_programa) "
+                    + "VALUES(?, ?, ?, ?)");
             consulta.setInt(1, asignatura.getCodigo());
             consulta.setString(2, asignatura.getNombre());
             consulta.setInt(3, asignatura.getCreditos());
             consulta.setInt(4, asignatura.getPrograma().getCodigo());
-            consulta.setInt(5, asignatura.getProfesor().getCodigo());
             consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);

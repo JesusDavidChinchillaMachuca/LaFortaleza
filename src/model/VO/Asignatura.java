@@ -10,17 +10,15 @@ public class Asignatura {
     private String nombre;
     private int creditos;
     private Programa programa;
-    private Profesor profesor;
 
     public Asignatura() {
     }
 
-    public Asignatura(int codigo, String nombre, int creditos, Programa programa, Profesor profesor) {
+    public Asignatura(int codigo, String nombre, int creditos, Programa programa) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.creditos = creditos;
         this.programa = programa;
-        this.profesor = profesor;
     }
 
     public int getCodigo() {
@@ -53,14 +51,6 @@ public class Asignatura {
 
     public void setPrograma(Programa programa) {
         this.programa = programa;
-    }
-
-    public Profesor getProfesor() {
-        return profesor;
-    }
-
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
     }
 
 }

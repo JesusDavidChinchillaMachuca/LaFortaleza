@@ -36,33 +36,46 @@ public class PrincipalController implements ActionListener {
         vista.btnRegistrarEstudiante.addActionListener(controller);
         vista.btnRegistrarDepartamento.addActionListener(controller);
         vista.btnRegistrarPrograma.addActionListener(controller);
+        vista.btnRegistrarGrupo.addActionListener(controller);
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent event) {
 
+        //abrir GUI Registro profesor
         if (event.getSource() == vista.btnRegistrarProfesor) {
             registrarProfesorGUI();
         }
-        
+
+        //abrir GUI Registro asignatura
         if (event.getSource() == vista.btnRegistrarAsignatura) {
             registrarAsignaturaGUI();
         }
-        
+
+        //abrir GUI Registro estudiante
         if (event.getSource() == vista.btnRegistrarEstudiante) {
             registrarEstudianteGUI();
         }
-        
+
+        //abrir GUI Registro departamento
         if (event.getSource() == vista.btnRegistrarDepartamento) {
             registrarDepartamentoGUI();
         }
-        
+
+        //abrir GUI Registro programa
         if (event.getSource() == vista.btnRegistrarPrograma) {
             registrarProgramaGUI();
         }
-        
+
+        //abrir GUI matricula
         if (event.getSource() == vista.btnMatricula) {
-            MatriculaGUI();
+            matriculaGUI();
+        }
+
+        //abrir GUI Registro grupo
+        if (event.getSource() == vista.btnRegistrarGrupo) {
+            RegistrarGrupoGUI();
         }
 
     }
@@ -96,11 +109,16 @@ public class PrincipalController implements ActionListener {
         vista.setVisible(false);
         RegistrarProgramaController programaController = new RegistrarProgramaController();
     }
-    
+
     // Ocultar la GUI actual (si hay una) y mostrar la MatriculaGUI
-    public void MatriculaGUI() {
+    public void matriculaGUI() {
         vista.setVisible(false);
         MatriculaController matriculaController = new MatriculaController();
+    }
+
+    public void RegistrarGrupoGUI() {
+        vista.setVisible(false);
+        RegistrarGrupoController registrarGrupoController = new RegistrarGrupoController();
     }
 
 }

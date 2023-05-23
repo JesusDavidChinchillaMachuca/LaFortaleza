@@ -35,6 +35,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnMatricula = new javax.swing.JButton();
         btnRegistrarDepartamento = new javax.swing.JButton();
         btnRegistrarPrograma = new javax.swing.JButton();
+        btnRegistrarGrupo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad La Fortaleza");
@@ -91,49 +92,59 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRegistrarPrograma.setText("Registrar Programa");
         btnRegistrarPrograma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnRegistrarGrupo.setBackground(new java.awt.Color(204, 204, 204));
+        btnRegistrarGrupo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnRegistrarGrupo.setForeground(new java.awt.Color(0, 0, 0));
+        btnRegistrarGrupo.setText("Registrar Grupo");
+        btnRegistrarGrupo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         javax.swing.GroupLayout panelLaFortalezaLayout = new javax.swing.GroupLayout(panelLaFortaleza);
         panelLaFortaleza.setLayout(panelLaFortalezaLayout);
         panelLaFortalezaLayout.setHorizontalGroup(
             panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnRegistrarEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(43, 43, 43)
-                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(btnRegistrarPrograma)))
-                .addGap(44, 44, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLaFortalezaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnMatricula)
                 .addGap(15, 15, 15))
+            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                        .addComponent(btnRegistrarEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                        .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelLaFortalezaLayout.createSequentialGroup()
+                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(btnRegistrarPrograma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegistrarGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(19, 19, 19)))
+                        .addGap(37, 37, 37))))
         );
         panelLaFortalezaLayout.setVerticalGroup(
             panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLaFortalezaLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(txtBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(29, 29, 29)
+                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrarEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistrarAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelLaFortalezaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegistrarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistrarDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnRegistrarPrograma, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                    .addComponent(btnRegistrarGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(111, 111, 111)
                 .addComponent(btnMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -176,6 +187,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnRegistrarAsignatura;
     public javax.swing.JButton btnRegistrarDepartamento;
     public javax.swing.JButton btnRegistrarEstudiante;
+    public javax.swing.JButton btnRegistrarGrupo;
     public javax.swing.JButton btnRegistrarProfesor;
     public javax.swing.JButton btnRegistrarPrograma;
     public javax.swing.JPanel panelLaFortaleza;

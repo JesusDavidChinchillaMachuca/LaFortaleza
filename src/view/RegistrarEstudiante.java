@@ -31,9 +31,7 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         txtCodigo = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
-        lblPorCodigo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        txtBuscarPorCodigo = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
@@ -78,13 +76,6 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
         btnAgregar.setText("Agregar");
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        lblPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        lblPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
-        lblPorCodigo.setText("Por codigo:");
-
-        txtBuscarPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtBuscarPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
 
         btnBuscar.setBackground(new java.awt.Color(204, 204, 204));
         btnBuscar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
@@ -143,16 +134,9 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
         panelRegistrarEstudianteLayout.setHorizontalGroup(
             panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                        .addComponent(lblPorCodigo)
-                        .addGap(402, 402, 402))
-                    .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                        .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
             .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,17 +194,13 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
                     .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPorCodigo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscarPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -267,10 +247,8 @@ public class RegistrarEstudiante extends javax.swing.JFrame {
     public javax.swing.JLabel lblDireccion;
     public javax.swing.JLabel lblGenero;
     public javax.swing.JLabel lblNombre;
-    public javax.swing.JLabel lblPorCodigo;
     public javax.swing.JPanel panelRegistrarEstudiante;
     public javax.swing.JTable tabla;
-    public javax.swing.JTextField txtBuscarPorCodigo;
     public javax.swing.JTextField txtCodigo;
     public javax.swing.JTextField txtCorreo;
     public javax.swing.JTextField txtDireccion;

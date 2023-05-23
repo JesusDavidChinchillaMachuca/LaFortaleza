@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import model.DAO.Conexion;
 import model.DAO.ProgramaDAO;
 import model.VO.Departamento;
@@ -61,7 +62,7 @@ public class RegistrarProgramaController implements ActionListener {
         }
 
         if (event.getSource() == registrarPrograma.btnBuscar) {
-
+            MostrarPrograma(registrarPrograma.tabla);
         }
 
         if (event.getSource() == registrarPrograma.btnInicio) {
@@ -77,6 +78,16 @@ public class RegistrarProgramaController implements ActionListener {
             us.guardar(Conexion.obtener(), programa);
         } catch (Exception e) {
         }
+    }
+
+    public void MostrarPrograma(JTable tablaPrograma) {
+        try {
+            ProgramaDAO vdao = new ProgramaDAO();
+            vdao.mostrarPrograma(Conexion.obtener(), tablaPrograma);
+
+        } catch (Exception e) {
+        }
+
     }
 
 }

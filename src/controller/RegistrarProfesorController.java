@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import model.DAO.Conexion;
 import model.DAO.ProfesorDAO;
 import model.VO.Departamento;
@@ -45,9 +46,9 @@ public class RegistrarProfesorController implements ActionListener {
             Profesor profesor = new Profesor(codigo, nombre, titulo, departamento);
 
             registrar(profesor);
-            
+
             JOptionPane.showMessageDialog(registroProfesor, "Se ha registrado correctamente");
-            
+
             registroProfesor.txtCodigo.setText("");
             registroProfesor.txtNombre.setText("");
             registroProfesor.txtTitulo.setText("");
@@ -55,7 +56,7 @@ public class RegistrarProfesorController implements ActionListener {
         }
 
         if (event.getSource() == registroProfesor.btnBuscar) {
-
+            MostarProfesor(registroProfesor.tabla);
         }
 
         if (event.getSource() == registroProfesor.btnInicio) {
@@ -71,6 +72,16 @@ public class RegistrarProfesorController implements ActionListener {
             us.guardar(Conexion.obtener(), profesor);
         } catch (Exception e) {
         }
+    }
+
+    public void MostarProfesor(JTable tablaProfesor) {
+        try {
+            ProfesorDAO vdao = new ProfesorDAO();
+            vdao.mostrarProfesor(Conexion.obtener(), tablaProfesor);
+
+        } catch (Exception e) {
+        }
+
     }
 
 }

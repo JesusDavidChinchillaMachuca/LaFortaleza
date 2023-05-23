@@ -2,12 +2,9 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
-import model.DAO.AsignaturaDAO;
 import model.DAO.Conexion;
-import model.VO.Asignatura;
-import model.VO.Profesor;
-import model.VO.Programa;
+import model.DAO.MatriculaDAO;
+import model.VO.Matricula;
 import view.MatriculaVista;
 
 /**
@@ -29,6 +26,7 @@ public class MatriculaController implements ActionListener {
         matriculaVista.btnHorario.addActionListener(controller);
         matriculaVista.btnMatricularse.addActionListener(controller);
         matriculaVista.btnInicio.addActionListener(controller);
+       matriculaVista.btnBuscar.addActionListener(controller);
     }
 
     @Override
@@ -45,13 +43,17 @@ public class MatriculaController implements ActionListener {
         if (event.getSource() == matriculaVista.btnInicio) {
 
         }
+        
+        if (event.getSource() == matriculaVista.btnBuscar) {
+
+        }
 
     }
 
-    public void registrar(Asignatura asignatura) {
+    public void registrar(Matricula matricula) {
         try {
-            AsignaturaDAO us = new AsignaturaDAO();
-            us.guardar(Conexion.obtener(), asignatura);
+            MatriculaDAO us = new MatriculaDAO();
+            us.guardar(Conexion.obtener(), matricula);
         } catch (Exception e) {
         }
     }

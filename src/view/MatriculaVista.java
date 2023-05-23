@@ -35,7 +35,7 @@ public class MatriculaVista extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnMatricularse = new javax.swing.JButton();
         btnInicio = new javax.swing.JButton();
-        btnHorario1 = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
 
@@ -76,6 +76,7 @@ public class MatriculaVista extends javax.swing.JFrame {
         btnHorario.setForeground(new java.awt.Color(0, 0, 0));
         btnHorario.setText("Ver Horarios");
 
+        tablaHorario.setForeground(new java.awt.Color(0, 0, 0));
         tablaHorario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -100,10 +101,10 @@ public class MatriculaVista extends javax.swing.JFrame {
         btnInicio.setForeground(new java.awt.Color(0, 0, 0));
         btnInicio.setText("Inicio");
 
-        btnHorario1.setBackground(new java.awt.Color(255, 255, 255));
-        btnHorario1.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        btnHorario1.setForeground(new java.awt.Color(0, 0, 0));
-        btnHorario1.setText("Buscar");
+        btnBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(0, 0, 0));
+        btnBuscar.setText("Buscar");
 
         jLabel4.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,7 +139,7 @@ public class MatriculaVista extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnHorario1)))
+                        .addComponent(btnBuscar)))
                 .addContainerGap())
         );
         panelRegistrarEstudianteLayout.setVerticalGroup(
@@ -148,7 +149,7 @@ public class MatriculaVista extends javax.swing.JFrame {
                 .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
                     .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnHorario1)
+                        .addComponent(btnBuscar)
                         .addComponent(jLabel4)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -201,8 +202,8 @@ public class MatriculaVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel bg;
+    public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnHorario;
-    public javax.swing.JButton btnHorario1;
     public javax.swing.JButton btnInicio;
     public javax.swing.JButton btnMatricularse;
     private javax.swing.JLabel jLabel1;

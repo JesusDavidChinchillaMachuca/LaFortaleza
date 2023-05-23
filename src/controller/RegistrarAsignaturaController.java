@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import model.DAO.AsignaturaDAO;
 import model.DAO.Conexion;
 import model.VO.Asignatura;
@@ -56,7 +57,7 @@ public class RegistrarAsignaturaController implements ActionListener {
         }
 
         if (event.getSource() == registroAsignatura.btnBuscar) {
-
+            MostarAsignatura(registroAsignatura.tabla);
         }
 
         if (event.getSource() == registroAsignatura.btnInicio) {
@@ -74,4 +75,13 @@ public class RegistrarAsignaturaController implements ActionListener {
         }
     }
 
+    public void MostarAsignatura(JTable tablaAsignatura) {
+        try {
+            AsignaturaDAO vdao = new AsignaturaDAO();
+            vdao.mostrarAsignatura(Conexion.obtener(), tablaAsignatura);
+
+        } catch (Exception e) {
+        }
+
+    }
 }

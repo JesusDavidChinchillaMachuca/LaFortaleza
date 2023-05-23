@@ -39,9 +39,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
         txtCodDepartamento = new javax.swing.JTextField();
         lblCreditos3 = new javax.swing.JLabel();
         txtCodDirector = new javax.swing.JTextField();
-        lblBuscarPorCodigo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        txtPorCodigo = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
@@ -95,13 +93,6 @@ public class RegistrarPrograma extends javax.swing.JFrame {
         txtCodDirector.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
         txtCodDirector.setForeground(new java.awt.Color(0, 0, 0));
 
-        lblBuscarPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        lblBuscarPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
-        lblBuscarPorCodigo.setText("Por codigo:");
-
-        txtPorCodigo.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        txtPorCodigo.setForeground(new java.awt.Color(255, 255, 255));
-
         btnBuscar.setBackground(new java.awt.Color(204, 204, 204));
         btnBuscar.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
         btnBuscar.setForeground(new java.awt.Color(0, 0, 0));
@@ -109,7 +100,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
         btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         tabla.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        tabla.setForeground(new java.awt.Color(255, 255, 255));
+        tabla.setForeground(new java.awt.Color(0, 0, 0));
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -139,18 +130,8 @@ public class RegistrarPrograma extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBuscarPorCodigo)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -171,12 +152,14 @@ public class RegistrarPrograma extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtCodDirector)
                                     .addComponent(txtCodDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 153, Short.MAX_VALUE))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBuscar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
@@ -208,11 +191,7 @@ public class RegistrarPrograma extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblBuscarPorCodigo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -260,7 +239,6 @@ public class RegistrarPrograma extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    public javax.swing.JLabel lblBuscarPorCodigo;
     public javax.swing.JLabel lblCodigo1;
     public javax.swing.JLabel lblCreditos1;
     public javax.swing.JLabel lblCreditos2;
@@ -271,7 +249,6 @@ public class RegistrarPrograma extends javax.swing.JFrame {
     public javax.swing.JTextField txtCodDirector;
     public javax.swing.JTextField txtCodigo;
     public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtPorCodigo;
     public javax.swing.JTextField txtUbicacion;
     // End of variables declaration//GEN-END:variables
 }

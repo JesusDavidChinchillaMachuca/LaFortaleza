@@ -6,25 +6,15 @@ package model.VO;
  */
 public class Matricula {
 
-    private int idMatricula;
     private Estudiante estudiante;
     private Grupo grupo;
 
     public Matricula() {
     }
 
-    public Matricula(int idMatricula, Estudiante estudiante, Grupo grupo) {
-        this.idMatricula = idMatricula;
+    public Matricula(Estudiante estudiante, Grupo grupo) {
         this.estudiante = estudiante;
         this.grupo = grupo;
-    }
-
-    public int getIdMatricula() {
-        return idMatricula;
-    }
-
-    public void setIdMatricula(int idMatricula) {
-        this.idMatricula = idMatricula;
     }
 
     public Estudiante getEstudiante() {

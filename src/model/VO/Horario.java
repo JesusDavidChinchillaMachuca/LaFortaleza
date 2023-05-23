@@ -6,6 +6,7 @@ package model.VO;
  */
 public class Horario {
 
+    private Grupo grupo;
     private String codigoSalon;
     private String horaInicio;
     private String horaFin;
@@ -14,11 +15,24 @@ public class Horario {
     public Horario() {
     }
 
-    public Horario(String codigoSalon, String horaInicio, String horaFin, String diaSemana) {
+    public Horario(String codigoSalon) {
+        this.codigoSalon = codigoSalon;
+    }
+
+    public Horario(Grupo grupo, String codigoSalon, String horaInicio, String horaFin, String diaSemana) {
+        this.grupo = grupo;
         this.codigoSalon = codigoSalon;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.diaSemana = diaSemana;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
     }
 
     public String getCodigoSalon() {

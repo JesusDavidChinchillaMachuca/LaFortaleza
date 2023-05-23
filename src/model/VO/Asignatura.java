@@ -14,6 +14,10 @@ public class Asignatura {
     public Asignatura() {
     }
 
+    public Asignatura(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Asignatura(int codigo, String nombre, int creditos, Programa programa) {
         this.codigo = codigo;
         this.nombre = nombre;

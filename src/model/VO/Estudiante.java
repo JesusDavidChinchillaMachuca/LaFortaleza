@@ -12,6 +12,13 @@ public class Estudiante {
     private String genero;
     private String correo;
 
+    public Estudiante() {
+    }
+
+    public Estudiante(int codigo) {
+        this.codigo = codigo;
+    }
+
     public Estudiante(int codigo, String nombre, String direccion, String genero, String correo) {
         this.codigo = codigo;
         this.nombre = nombre;

@@ -10,17 +10,19 @@ public class Grupo {
     private int capacidad;
     private Profesor profesor;
     private Asignatura asignatura;
-    private Horario horario;
 
     public Grupo() {
     }
 
-    public Grupo(String id, int capacidad, Profesor profesor, Asignatura asignatura, Horario horario) {
+    public Grupo(String id) {
+        this.id = id;
+    }
+
+    public Grupo(String id, int capacidad, Profesor profesor, Asignatura asignatura) {
         this.id = id;
         this.capacidad = capacidad;
         this.profesor = profesor;
         this.asignatura = asignatura;
-        this.horario = horario;
     }
 
     public String getId() {
@@ -53,14 +55,6 @@ public class Grupo {
 
     public void setAsignatura(Asignatura asignatura) {
         this.asignatura = asignatura;
-    }
-
-    public Horario getHorario() {
-        return horario;
-    }
-
-    public void setHorario(Horario horario) {
-        this.horario = horario;
     }
 
 }

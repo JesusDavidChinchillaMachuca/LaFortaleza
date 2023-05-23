@@ -11,13 +11,12 @@ public class GrupoDAO {
         try {
 
             PreparedStatement consulta;
-            consulta = conexion.prepareStatement("INSERT INTO grupo (id_grupo, capacidad, codigo_profesor, codigo_salon, codigo_asignatura) "
-                    + "VALUES(?, ?, ?, ?, ?)");
+            consulta = conexion.prepareStatement("INSERT INTO grupo (id_grupo, capacidad, codigo_profesor, codigo_asignatura) "
+                    + "VALUES(?, ?, ?, ?)");
             consulta.setString(1, grupo.getId());
             consulta.setInt(2, grupo.getCapacidad());
             consulta.setInt(3, grupo.getProfesor().getCodigo());
-            consulta.setString(4, grupo.getHorario().getCodigoSalon());
-            consulta.setInt(5, grupo.getAsignatura().getCodigo());
+            consulta.setInt(4, grupo.getAsignatura().getCodigo());
             consulta.executeUpdate();
         } catch (SQLException ex) {
             throw new SQLException(ex);

@@ -29,7 +29,6 @@ public class MatriculaVista extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaAsignaturas = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        btnHorario = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaHorario = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
@@ -37,7 +36,7 @@ public class MatriculaVista extends javax.swing.JFrame {
         btnInicio = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCodigo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad La Fortaleza");
@@ -62,7 +61,7 @@ public class MatriculaVista extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Créditos", "Programa", "Profesor"
+                "Codigo", "Nombre", "Créditos", "Programa"
             }
         ));
         jScrollPane1.setViewportView(tablaAsignaturas);
@@ -71,18 +70,13 @@ public class MatriculaVista extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Horarios");
 
-        btnHorario.setBackground(new java.awt.Color(255, 255, 255));
-        btnHorario.setFont(new java.awt.Font("Roboto Light", 1, 12)); // NOI18N
-        btnHorario.setForeground(new java.awt.Color(0, 0, 0));
-        btnHorario.setText("Ver Horarios");
-
         tablaHorario.setForeground(new java.awt.Color(0, 0, 0));
         tablaHorario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Hora de Inicio", "Hora de fin", "Codigo del salon", "Dia de clase"
+                "Grupo", "Hora de Inicio", "Hora de fin", "Codigo del salon", "Dia de clase"
             }
         ));
         jScrollPane2.setViewportView(tablaHorario);
@@ -117,8 +111,19 @@ public class MatriculaVista extends javax.swing.JFrame {
             .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
+                    .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addGap(13, 13, 13)
+                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnBuscar))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarEstudianteLayout.createSequentialGroup()
+                        .addGap(0, 416, Short.MAX_VALUE)
+                        .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
                         .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -126,20 +131,7 @@ public class MatriculaVista extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGap(26, 26, 26)
                                 .addComponent(btnMatricularse)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarEstudianteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnHorario, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelRegistrarEstudianteLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(13, 13, 13)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscar)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelRegistrarEstudianteLayout.setVerticalGroup(
@@ -151,21 +143,19 @@ public class MatriculaVista extends javax.swing.JFrame {
                     .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnBuscar)
                         .addComponent(jLabel4)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnHorario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addGroup(panelRegistrarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(btnMatricularse)
                     .addComponent(btnInicio))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
@@ -203,7 +193,6 @@ public class MatriculaVista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JPanel bg;
     public javax.swing.JButton btnBuscar;
-    public javax.swing.JButton btnHorario;
     public javax.swing.JButton btnInicio;
     public javax.swing.JButton btnMatricularse;
     private javax.swing.JLabel jLabel1;
@@ -212,9 +201,9 @@ public class MatriculaVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
     public javax.swing.JPanel panelRegistrarEstudiante;
     public javax.swing.JTable tablaAsignaturas;
     public javax.swing.JTable tablaHorario;
+    public javax.swing.JTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
 }

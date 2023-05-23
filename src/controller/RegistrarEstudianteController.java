@@ -74,10 +74,10 @@ public class RegistrarEstudianteController implements ActionListener {
         }
     }
 
-    public void MostrarEstudiante(JTable tablaEstudiante) {
+    public void MostrarEstudiante(JTable tabla) {
         try {
             EstudianteDAO vdao = new EstudianteDAO();
-            vdao.mostrarEstudiante(Conexion.obtener(), tablaEstudiante);
+            vdao.mostrarEstudiante(Conexion.obtener(), tabla);
 
         } catch (Exception e) {
         }
